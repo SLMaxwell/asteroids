@@ -22,6 +22,9 @@ def main():
     for event in pygame.event.get():
       if event.type == pygame.QUIT:
         return
+    # ... Or if the user pressed the Esc Key.
+    if pygame.key.get_pressed()[pygame.K_ESCAPE]:
+       return
 
     # Update our screen objects
     for u in updatable:
