@@ -18,14 +18,15 @@ def main():
   player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
 
   while True:
+    # Quit the game if window "Close" was clicked..
     for event in pygame.event.get():
       if event.type == pygame.QUIT:
         return
-      
+
     # Update our screen objects
     for u in updatable:
       u.update(dt)
-    
+
     # Display a Black Universe filled with our objects
     screen.fill("black")
     for d in drawable:
