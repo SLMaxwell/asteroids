@@ -50,7 +50,7 @@ def main():
     for s in shots:
       for a in asteroids:
         if a.collision(s):
-          a.kill()
+          a.split()
           s.kill()
 
     # Display a Black Universe filled with our objects
