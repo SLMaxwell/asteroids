@@ -16,9 +16,11 @@ def main():
     for event in pygame.event.get():
       if event.type == pygame.QUIT:
         return
+      
+    # Update our screen objects
+    player.update(dt)
     
-    # Display a Black Universe
-    # original screen.fill("black", pygame.Rect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT))
+    # Display a Black Universe filled with our objects
     screen.fill("black")
     player.draw(screen)
     pygame.display.flip()  # display update
