@@ -14,9 +14,13 @@ def main():
     for event in pygame.event.get():
       if event.type == pygame.QUIT:
         return
-      
-    screen.fill("black",pygame.Rect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT))
+    
+    # Display a Black Universe
+    # original screen.fill("black", pygame.Rect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT))
+    screen.fill("black")
     pygame.display.flip()  # display update
+
+    # Limit the framerate to 60 FPS
     dt = clock.tick(60) / 1000
 
 if __name__ == "__main__":
