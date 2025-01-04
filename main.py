@@ -37,6 +37,12 @@ def main():
     for u in updatable:
       u.update(dt)
 
+    # Check for Collisions and Exit the Game if Player has collided.
+    for a in asteroids:
+      if player.collision(a):
+        print("Game over!")
+        return
+
     # Display a Black Universe filled with our objects
     screen.fill("black")
     for d in drawable:
