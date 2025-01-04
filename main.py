@@ -45,6 +45,13 @@ def main():
       if player.collision(a):
         print("Game over!")
         return
+      
+    # Check for Shot to Asteroid collisions.
+    for s in shots:
+      for a in asteroids:
+        if a.collision(s):
+          a.kill()
+          s.kill()
 
     # Display a Black Universe filled with our objects
     screen.fill("black")
